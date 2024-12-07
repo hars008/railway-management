@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=railway_management
+      - DB_USER=railway_user
+      - DB_PASSWORD=railway_password
+      - ADMIN_API_KEY=secret
+      - JWT_SECRET=secret
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=railway_management
+      - POSTGRES_USER=railway_user
+      - POSTGRES_PASSWORD=railway_password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
