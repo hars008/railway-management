@@ -28,8 +28,8 @@ This is a comprehensive Railway Management System built with Node.js, Express, a
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/railway-management-system.git
-cd railway-management-system
+git clone https://github.com/hars008/railway-management
+cd railway-management
 ```
 
 2. Download and install Doker 
